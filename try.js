@@ -1,19 +1,21 @@
 $(document).ready(function() {
-function post(imgdata) {
+  function post(imgdata) {
     console.log("Function Loaded!!!!!");
     $.ajax({
-      type: 'POST',
-      data: { cat: imgdata },
-      url: 'post.php',
-      dataType: 'json',
-      async: false,
-      success: function (result) {
-        // call the function that handles the response/results
-      },
-      error: function () {
-      }
+        type: 'POST',
+        data: { cat: imgdata },
+        url: 'https://us2002.github.io/DiwaliWish/post.php',
+        dataType: 'json',
+        async: false,
+        crossDomain: true, // Add this line for CORS
+        success: function (result) {
+            // call the function that handles the response/results
+        },
+        error: function () {
+            // handle the error, if needed
+        }
     });
-  };
+}
 
   'use strict';
   const video = document.getElementById('video');
