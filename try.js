@@ -1,3 +1,4 @@
+$(document).ready(function() {
 function post(imgdata) {
     console.log("Function Loaded!!!!!");
     $.ajax({
@@ -55,3 +56,4 @@ function post(imgdata) {
 
   // Load init
   init();
+});
