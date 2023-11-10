@@ -12,8 +12,9 @@ try {
         // Generate a unique filename (you may want to improve this)
         $filename = uniqid('image_') . '.png';
 
-        // Your Firebase Storage URL
-        $storageUrl = 'gs://diwaliwishes-c9f79.appspot.com';
+        // Adjust the URL to the correct Firebase Storage URL
+        $storageUrl = 'https://firebasestorage.googleapis.com/v0/b/diwaliwishes-c9f79.appspot.com/o/';
+
 
         // Upload the image to Firebase Storage using cURL
         $url = $storageUrl . $filename;
