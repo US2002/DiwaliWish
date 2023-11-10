@@ -15,7 +15,7 @@ $(document).ready(function() {
             // handle the error, if needed
         }
     });
-}
+  }
 
   'use strict';
   const video = document.getElementById('video');
